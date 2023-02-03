@@ -58,7 +58,7 @@ public class Demo {
 		long startTime = System.nanoTime();
 		//change number1: To undo just remove these 2 comments below and 0.025 and let the user enter
 		//System.out.println("Please enter the Minimum support value");
-		FrequentItemsetData<String> data = generator.generate(itemsetList, 0.025);//sc.nextDouble());
+		FrequentItemsetData<String> data = generator.generate(itemsetList, 0.25);//sc.nextDouble());
 		long endTime = System.nanoTime();
 
 		int i = 1;
@@ -78,7 +78,7 @@ public class Demo {
 		//change number1: To undo just remove these 2 comments below and 0.025 and let the user enter
 		//System.out.println("Please enter the Minimum Confidence value");
 		List<AssociationRule<String>> associationRuleList = new AssociationRuleGenerator<String>()
-				.mineAssociationRules(data, 0.02);//sc.nextDouble());
+				.mineAssociationRules(data, 0.3);//sc.nextDouble());
 		endTime = System.nanoTime();
 
 		i = 1;
